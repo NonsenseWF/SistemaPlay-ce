@@ -1,89 +1,60 @@
-/* Estilo básico para layout */
+/* Resetando estilos padrão */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    padding: 20px;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ff9900;
-  }
-  
-  .comandas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-  
-  .comanda {
-    background-color: #ffffff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-  
-  h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .menu-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
-  
-  textarea {
-    width: 100%;
-    resize: none;
-  }
-  
-  .submit-btn {
-    display: block;
-    width: 100%;
-    padding: 12px 65px;
-    background-color: #ff9900;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .submit-btn:hover {
-    background-color: #d97b00;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+}
+
+/* Estilizando o corpo da página */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9900, #ffbb54);
+}
+
+/* Estilizando os botões */
+button {
+  background-color: #1e293b; /* Azul escuro */
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito hover */
+button:hover {
+  background-color: #ffcc00; /* Amarelo para dar um efeito chamativo */
+  transform: scale(1.1);
+}
+
+/* Estilizando os links dentro dos botões */
+button a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+}
+
+/* Removendo estilo azul padrão dos links */
+button a:visited {
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
   button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 65px;
-    border: none;
-    border-radius: 10px;
-    background-color: #ff9900; 
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+      font-size: 1.2em;
+      padding: 10px 20px;
   }
-  a {
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    text-decoration:none;
-  }
+}
