@@ -3,55 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio Interativo</title>
     <link rel="stylesheet" href="cardapio.css"/>
+    <title>Cardápio Interativo</title>
 </head>
 <body>
 
     <div class="menu-container">
         <h1>Cardápio</h1>
 
-        <!-- Item do cardápio -->
-        <div class="menu-item">
-            <label for="item1">Pizza </label>
-            <span class="price">R$ 35,00</span>
-            <div class="checkbox-container">
-                <input type="checkbox" id="item1">
+        <form action="salvar_pedido.php" method="POST">
+            <div class="menu-item">
+                <label for="item1">Pizza</label>
+                <input type="checkbox" name="pedido[]" value="Pizza">
             </div>
-        </div>
-
-        <div class="menu-item">
-            <label for="item2">Hambúrguer Clássico</label>
-            <span class="price">R$ 28,00</span>
-            <div class="checkbox-container">
-                <input type="checkbox" id="item2">
+            <div class="menu-item">
+                <label for="item2">Hambúrguer Clássico</label>
+                <input type="checkbox" name="pedido[]" value="Hambúrguer Clássico">
             </div>
-        </div>
-
-        <div class="menu-item">
-            <label for="item3">Salada </label>
-            <span class="price">R$ 22,00</span>
-            <div class="checkbox-container">
-                <input type="checkbox" id="item3">
+            <div class="menu-item">
+                <label for="item3">Salada</label>
+                <input type="checkbox" name="pedido[]" value="Salada">
             </div>
-        </div>
-
-        <div class="menu-item">
-            <label for="item4">Fritas</label>
-            <span class="price">R$ 40,00</span>
-            <div class="checkbox-container">
-                <input type="checkbox" id="item4">
+            <div class="menu-item">
+                <label for="item4">Fritas</label>
+                <input type="checkbox" name="pedido[]" value="Fritas">
             </div>
-        </div>
-
-        <div class="menu-item">
-            <label for="item5">Sorvete Artesanal</label>
-            <span class="price">R$ 12,00</span>
-            <div class="checkbox-container">
-                <input type="checkbox" id="item5">
+            <div class="menu-item">
+                <label for="item5">Sorvete Artesanal</label>
+                <input type="checkbox" name="pedido[]" value="Sorvete Artesanal">
             </div>
-        </div>
 
+            <div class="input-group">
+                <label for="mesa">Número da Comanda:</label>
+                <input type="number" name="mesa" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Enviar Pedido</button>
+            </div>
+        </form>
     </div>
 
 </body>
