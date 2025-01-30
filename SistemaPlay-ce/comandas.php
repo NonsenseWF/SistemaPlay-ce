@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Comandas</h1>
-        <form id="comandasForm" method="post" action="salvar_comandas.php">
+        <form id="comandasForm" method="post" action="salvar_pedido.php">
             <div class="comandas">
                 <?php
                    for ($i = 1; $i <= 10; $i++) {
-                        echo '<button type="button"><a href="cardapio.html">Comanda ' . $i . '</a></button>';
+                    echo '<button type="button"><a href="cardapio.html">Comanda ' . $i . '</a></button>';
+                        //echo '<button type="button"><a href="cardapio.html">New comanda </a></button>';
                     }
                 ?>
             </div>
